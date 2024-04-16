@@ -208,7 +208,7 @@ function procesarGremios(respuestaGremios) {
             procesarSwarm(respuestaSwarm)
             break;
         case 4:
-            alert("Elegiste electrónica.\n Te gusta que la música construya sobre sus propios patrones para hacer algo nuevo y creativo.\n Podrías usar estrategias de combos, utiliza distintos efectos juntos para crear un resultado deslumbrante.");
+            alert("Elegiste música fusión.\n Te gusta que la música construya sobre sus propios patrones para hacer algo nuevo y creativo.\n Podrías usar estrategias de combos, utiliza distintos efectos juntos para crear un resultado deslumbrante.");
             let respuestaCombo = combo();
             procesarCombo(respuestaCombo)
             break;
