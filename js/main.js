@@ -15,7 +15,7 @@
 /* En esta sección estan las funciones que RECOGEN los datos ingresados por el usuario en dificultad PRINCIPIANTE. */
 
     function principiante() {
-        let respuestaPrincipiante = prompt("¿Qué prefieres hacer en tu tiempo libre?:\n\n1. Dormir\n2. Practicar un deporte\n3. Reunirte con amigos\n4. Salir a comer\n5. Leer un libro");
+        let respuestaPrincipiante = prompt("(1/7) - ¿Qué prefieres hacer en tu tiempo libre?:\n\n1. Dormir\n2. Practicar un deporte\n3. Reunirte con amigos\n4. Salir a comer\n5. Leer un libro");
         let opcion = parseInt(respuestaPrincipiante);
 
         if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {;
@@ -27,7 +27,7 @@
     }
 
     function principiante2() {
-        let respuestaPrincipiante2 = prompt("¿Qué tipo de película disfrutas más?:\n\n1. Ciencia ficción\n2. Comedia\n3. Drama\n4. Terror\n5. Acción");
+        let respuestaPrincipiante2 = prompt("(2/7) - ¿Qué tipo de película disfrutas más?:\n\n1. Ciencia ficción\n2. Comedia\n3. Drama\n4. Terror\n5. Acción");
         let opcion = parseInt(respuestaPrincipiante2);
 
         if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {;
@@ -39,7 +39,7 @@
     }
 
     function principiante3() {
-        let respuestaPrincipiante3 = prompt("¿Cuál es animal favorito entre estos?:\n\n1. Murciélago\n2. Leopardo\n3. Rinoceronte\n4. Cuervo\n5. Perro");
+        let respuestaPrincipiante3 = prompt("(3/7) - ¿Cuál es animal favorito entre estos?:\n\n1. Murciélago\n2. Leopardo\n3. Rinoceronte\n4. Cuervo\n5. Perro");
         let opcion = parseInt(respuestaPrincipiante3);
 
         if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {;
@@ -51,7 +51,7 @@
     }
 
     function principiante4() {
-        let respuestaPrincipiante4 = prompt("¿Qué actividad te relaja más?:\n\n1. Salir a caminar\n2. Hacer jardinería\n3. Meditar\n4. Cocinar\n5. Ver la tele");
+        let respuestaPrincipiante4 = prompt("(4/7) - ¿Qué actividad te relaja más?:\n\n1. Salir a caminar\n2. Hacer jardinería\n3. Meditar\n4. Cocinar\n5. Ver la tele");
         let opcion = parseInt(respuestaPrincipiante4);
 
         if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {;
@@ -63,7 +63,7 @@
     }
     
     function principiante5() {
-        let respuestaPrincipiante5 = prompt("¿Qué instrumento musical te gusta mas?:\n\n1. Piano\n2. Flauta\n3. Violin\n4. Guitarra\n5. Tambor");
+        let respuestaPrincipiante5 = prompt("(5/7) - ¿Qué instrumento musical te gusta mas?:\n\n1. Piano\n2. Flauta\n3. Violin\n4. Guitarra\n5. Tambor");
         let opcion = parseInt(respuestaPrincipiante5);
 
         if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {;
@@ -75,7 +75,7 @@
     }
 
     function principiante6() {
-        let respuestaPrincipiante6 = prompt("¿Cuál es tu sabor favorito?:\n\n1. Dulce\n2. Amargo\n3. Picante\n4. Ácido\n5. Salado");
+        let respuestaPrincipiante6 = prompt("(6/7) - ¿Cuál es tu sabor favorito?:\n\n1. Dulce\n2. Amargo\n3. Picante\n4. Ácido\n5. Salado");
         let opcion = parseInt(respuestaPrincipiante6);
 
         if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {;
@@ -87,7 +87,7 @@
     }
 
     function principiante7() {
-        let respuestaPrincipiante7 = prompt("¿Qué tipo de trabajo voluntario te interesaría hacer?:\n\n1. Plantar árboles\n2. Ayudar a personas mayores\n3. Enseñar a niños\n4. Limpiar la calle\n5. Trabajar en un refugio de animales");
+        let respuestaPrincipiante7 = prompt("(7/7) - ¿Qué tipo de trabajo voluntario te interesaría hacer?:\n\n1. Plantar árboles\n2. Ayudar a personas mayores\n3. Enseñar a niños\n4. Limpiar la calle\n5. Trabajar en un refugio de animales");
         let opcion = parseInt(respuestaPrincipiante7);
 
         if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {;
@@ -297,20 +297,6 @@
                 return dimir();
             }
         }
-
-/* Template de funciones para RECOGER datos de respuestas */
-
-    function x() {
-        let respuestaX = prompt("");
-        let opcion = parseInt(respuestaX);
-
-        if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4 || opcion === 5) {
-            return opcion;
-        } else {
-            alert("Respuesta no válida, por favor ingresa 1, 2, 3, 4 o 5.");
-            return x();
-        }
-    }
 
 /* PROCESADO de datos de la primer pregunta de todo el test */
 
@@ -543,33 +529,6 @@
         let porcentajeBlanco = Math.round(calcularPorcentajes(colores.blanco));
         console.log(colores);
         alert("Según tus  respuestas, ésta es tu afinidad aproximada para cada color en Magic the Gathering:\n\n Blanco: " + "%" + porcentajeBlanco + "\n Negro: " + "%" + porcentajeNegro + "\n Azul: " + "%" + porcentajeAzul + "\n Verde: " + "%" + porcentajeVerde + "\n Rojo: " + "%" + porcentajeRojo)
-    }
-
-/* Template de funciones para PROCESAR datos de respuestas en dificultad PRINCIPIANTE*/
-
-    function procesarX(respuestaX) {
-        switch (respuestaX) {
-            case 1:
-                color.x++;
-                break;
-            case 2:
-                color.x++;
-                break;
-            case 3:
-                color.x++;
-                break;
-            case 4:
-                color.x++;
-                break;
-            case 5:
-                color.x++;
-                break;
-            default:
-                alert("Respuesta no válida, por favor ingresa 1, 2, 3, 4 o 5.")
-                return x();
-        }
-        console.log(colores);
-        procesarPrincipianteX();
     }
 
 /* En esta sección estan las funciones que PROCESAN los datos ingresados por el usuario en dificultad INTERMEDIA. */
@@ -962,31 +921,6 @@
                     return dimir();
             }
         }
-
-/* Template de funciones para PROCESAR datos de respuestas en dificultad INTERMEDIA*/
-
-    function procesarX(respuestaX) {
-        switch (respuestaX) {
-            case 1:
-                alert("");
-                break;
-            case 2:
-                alert("");
-                break;
-            case 3:
-                alert("");
-                break;
-            case 4:
-                alert("");
-                break;
-            case 5:
-                alert("");
-                break;
-            default:
-                alert("Respuesta no válida, por favor ingresa 1, 2, 3, 4 o 5.")
-                return x();
-        }
-    }
 
 /* Array conteniendo todos los resultados obtenidos por el usuario */
 
