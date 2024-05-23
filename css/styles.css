@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Goudy Bookletter";
+    src: url(../resources/fonts/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf);
+}
+
+
+
+.btn {
+    border: solid, 5px;
+    border-radius: 5px;
+    height: 155px;
+    width: auto;
+    min-width: 200px;
+    max-width: 400px;
+    background-color: #98632F;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    padding: 5px;
+    font-family: "Goudy Bookletter";
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.cartitas {
+    max-width: 350px;
+    height: auto;
+}
