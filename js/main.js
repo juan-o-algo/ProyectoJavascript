@@ -2750,7 +2750,7 @@ function mensajeFinal() {
     mediaQuery();
 }
 
-/* Función para cambiar el fondo de forma asincrónica y que no se note la demora en cargar la imagen */
+/* Función para cambiar el fondo de forma asincrónica con y sin animación y que no se note la demora en cargar la imagen */
 
 function cambiarFondoSinAnimacion(fondoUrl) {
     let fondo = new Image();
