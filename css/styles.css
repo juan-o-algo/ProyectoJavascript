@@ -3,6 +3,18 @@
     src: url(../resources/fonts/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf);
 }
 
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 2s ease-in-out;
+  z-index: -1000;
+}
+
 .btn {
     border: solid, 5px;
     border-radius: 5px;
@@ -19,9 +31,30 @@
     margin-top: 40px;
 }
 
+@keyframes borderColorChange {
+  0% {
+    border-color: #000;
+}
+50% {
+    border-color: #ffffff;
+}
+100% {
+    border-color: #000;
+}
+}
+
+.btn:hover {
+  animation: borderColorChange 2s infinite;
+}
+
 .cartitas {
     max-width: 250px;
     height: auto;
+    transition: transform 0.5s ease;
+}
+
+.cartitas:hover {
+  transform: scale(1.1);
 }
 
 * {
@@ -40,6 +73,11 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
   }
   
   .loader {

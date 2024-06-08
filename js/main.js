@@ -2752,7 +2752,7 @@ function mensajeFinal() {
 
 /* Función para cambiar el fondo de forma asincrónica y que no se note la demora en cargar la imagen */
 
-function cambiarFondo(fondoUrl) {
+function cambiarFondoSinAnimacion(fondoUrl) {
     let fondo = new Image();
     fondo.onload = function() {
         setTimeout(function() {
@@ -2761,6 +2761,30 @@ function cambiarFondo(fondoUrl) {
     };
     fondo.src = fondoUrl;
     }
+
+let fondoActual = document.createElement('div');
+fondoActual.classList.add('background-container');
+document.body.appendChild(fondoActual);
+
+function cambiarFondo(fondoUrl) {
+    
+    let nuevoFondo = document.createElement('div');
+    nuevoFondo.classList.add('background-container');
+    nuevoFondo.style.backgroundImage = 'url(' + fondoUrl + ')';
+    nuevoFondo.style.transform = 'translateX(100%)';
+    document.body.appendChild(nuevoFondo);
+
+    nuevoFondo.getBoundingClientRect();
+
+    nuevoFondo.style.transform = 'translateX(0)';
+
+    fondoActual.style.transform = 'translateX(-100%)';
+
+    setTimeout(() => {
+        fondoActual.remove();
+        fondoActual = nuevoFondo;
+    }, 2000);
+}
 
 /* Funciones para fetchear cartas de una api y traer una al azar, de modo que se busque hasta encontrar un resultado válido */
 
@@ -2811,7 +2835,7 @@ function cambiarFondo(fondoUrl) {
 function main() {
     document.body.style.backgroundColor = "black";
     document.body.style.fontFamily = "Goudy Bookletter";
-    cambiarFondo("./resources/4860f7d8-nykthos-shrine-to-nyx.jpg");
+    cambiarFondoSinAnimacion("./resources/4860f7d8-nykthos-shrine-to-nyx.jpg");
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "repeat-y";
@@ -2880,6 +2904,7 @@ function main() {
     contenedorCartitas.style.gap = "20px";
     contenedorCartitas.style.minHeight = "320px";
     contenedorCartitas.style.marginTop = "20px";
+    contenedorCartitas.innerHTML = "";
     
     const botonComenzar = document.createElement('button');
     botonComenzar.innerText = "Comenzar el test";
